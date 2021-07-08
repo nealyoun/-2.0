@@ -22,7 +22,7 @@ ML과 Deep Learning은 인공지능의 "지식 기반 접근"과 "데이터 기�
 - x(i)w(i) 값들을 합산하는 &Sigma; 처리는 각 전기 신호들이 뉴런 세포체 안에서 합해지는 과정
 - f() 는 Activation Function(활성화 함수)로 비선형 함수에 해당
 
-![chapter_0%2015829b624f3d49769f8a00de92a36f65/Screen_Shot_2021-07-08_at_2.23.49_PM.png](chapter_0%2015829b624f3d49769f8a00de92a36f65/Screen_Shot_2021-07-08_at_2.23.49_PM.png)
+!<img width="570" alt="Screen_Shot_2021-07-08_at_2 23 49_PM" src="https://user-images.githubusercontent.com/54128055/124869564-5b36c200-dffc-11eb-8803-3463eb99e144.png">
 
 뉴런의 세포체가 단순히 전기 신호들의 합을 나름의 처리를 통해 출력으로 삼듯이, perceptron의 activation function 또한 &Sigma;로부터 구한 값에 비선형 함수를 적용하여 perceptron 단위에서 최종 출력을 결정
 
