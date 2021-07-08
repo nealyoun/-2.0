@@ -12,7 +12,7 @@ ML과 Deep Learning은 인공지능의 "지식 기반 접근"과 "데이터 기�
 
 - 인공신경망(Artificial Neural Network)은 동물의 신경세포의 뉴런을 흉내내어 고안한 퍼셉트론(perceptron) 단위로 구성
 
-![chapter_0%2015829b624f3d49769f8a00de92a36f65/Screen_Shot_2021-07-08_at_2.19.42_PM.png](chapter_0%2015829b624f3d49769f8a00de92a36f65/Screen_Shot_2021-07-08_at_2.19.42_PM.png)
+!<img width="699" alt="Screen_Shot_2021-07-08_at_2 19 42_PM" src="https://user-images.githubusercontent.com/54128055/124869553-570aa480-dffc-11eb-8e03-137ac1bd5bcc.png">
 
 ## 인공 신경망의 기본 유닌, Perceptron
 
