@@ -4,7 +4,7 @@
 
 ## A.I. ML & Deep Learning
 
-가장 큰 개념은 인공지능. 즉 ML 과 Deep Learning은 인공지능의 부분 집합. 여기서 deep learning은 machine learning의 부분집합이다. 
+가장 큰 개념은 인공지능. 즉 ML 과 Deep Learning은 인공지능의 부분 집합. 여기서 deep learning은 machine learning의 부분집합.
 
 ML과 Deep Learning은 인공지능의 "지식 기반 접근"과 "데이터 기반 접근" 중 당연히 데이터 기반 접근 방식이다. (Machine Learning: 프로그램이 직접 데이터를 분석하여 데이터에 내재되어 있는 규칙이나 패턴을 포착하여 문제를 해결)
 
