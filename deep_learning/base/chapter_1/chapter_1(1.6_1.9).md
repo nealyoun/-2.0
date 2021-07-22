@@ -8,24 +8,24 @@
 
 편미분의 chain rule로 인해 Back Propagation 과정서의 cost function에 직간접적으로 영향을 미친 모든 성분에 대하여 손실 함수의 기울기를 계산
 
-![chapter_1%2034e20d6f85b646b897c2fc144edacc89/Untitled.png](chapter_1%2034e20d6f85b646b897c2fc144edacc89/Untitled.png)
+![Untitled 0](https://user-images.githubusercontent.com/54128055/126657097-7803d25d-48a1-487d-85c2-3fe4fbfa92ec.png)
 
 Back Propagation: foward propagation의 역순으로 진행 
 
-![chapter_1%2034e20d6f85b646b897c2fc144edacc89/Untitled%201.png](chapter_1%2034e20d6f85b646b897c2fc144edacc89/Untitled%201.png)
+![Untitled 1](https://user-images.githubusercontent.com/54128055/126657099-e95fc628-0a1a-4ba6-aeb4-ccce32c50d22.png)
 
 ### 입력이 다수인 경우의 처리
 
 y = f(x1, x2, x3, ... xn) 의 경우
 
-![chapter_1%2034e20d6f85b646b897c2fc144edacc89/Untitled%202.png](chapter_1%2034e20d6f85b646b897c2fc144edacc89/Untitled%202.png)
+![Untitled 2](https://user-images.githubusercontent.com/54128055/126657104-d1b1950b-b1f2-4448-8c67-728becca9946.png)
 
 - 각 입력 성분 별로 따로 처리
 - 파라미터에 해당되는 입력 성분의 경우 learning rate를 곱하여 값을 수정
 
-![chapter_1%2034e20d6f85b646b897c2fc144edacc89/Untitled%203.png](chapter_1%2034e20d6f85b646b897c2fc144edacc89/Untitled%203.png)
+![Untitled 3](https://user-images.githubusercontent.com/54128055/126657106-a7249dda-320a-42ff-850e-6d6edb84133a.png)
 
-![chapter_1%2034e20d6f85b646b897c2fc144edacc89/Untitled%204.png](chapter_1%2034e20d6f85b646b897c2fc144edacc89/Untitled%204.png)
+![Untitled 4](https://user-images.githubusercontent.com/54128055/126657111-2537d743-4252-40bd-acb6-78291d21eeec.png)
 
 ### 출력이 중복으로 이용되는 경우
 
@@ -33,13 +33,13 @@ y = f(x1, x2, x3, ... xn) 의 경우
 
 출력의 손실기울기들을 합산하고 해당 값을 이용해 입력에 대한 손실 기울기를 계산
 
-![chapter_1%2034e20d6f85b646b897c2fc144edacc89/Untitled%205.png](chapter_1%2034e20d6f85b646b897c2fc144edacc89/Untitled%205.png)
+![Untitled 5](https://user-images.githubusercontent.com/54128055/126657116-ae180eae-814a-4f60-af2f-cfcd12ac3d82.png)
 
 ### 학습률: &alpha;
 
 가중치 혹은 편향 즉 파라미터 성분은 해당 성분의 손실 기울기에 학습률을 곱한 값을 빼줌으로써 해당 값을 업데이트한다.
 
-![chapter_1%2034e20d6f85b646b897c2fc144edacc89/Untitled%203.png](chapter_1%2034e20d6f85b646b897c2fc144edacc89/Untitled%203.png)
+![Untitled 3](https://user-images.githubusercontent.com/54128055/126657106-a7249dda-320a-42ff-850e-6d6edb84133a.png)
 
 위 식의 &alpha; 는 학습 속도를 조절하는 hyperparameter로서 너무 크거나 작지 않게 설정하는 것이 중요
 
