@@ -1,7 +1,7 @@
 # &mu;(mu)   :books:
 
 ### :mortar_board: Created for academical purposes
-The repository will be mainly about Deep Learning & Machine Learning Algorithms<br> and our study in progress
+The repository will be mainly about Deep Learning & Machine Learning Algorithms and our study in progress
 
 ### :no_entry_sign: Rules
 * 그룹원들과 고른 책을 기준으로 공부
