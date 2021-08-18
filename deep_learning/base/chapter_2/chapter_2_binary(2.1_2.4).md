@@ -6,8 +6,6 @@
 
 1. Pulsar Dataset
 
-[Untitled](https://www.notion.so/af89af8537704efbb8b557f6d025694d)
-
 1. Feature
     1. Mean of the integrated profile
     2. Standard deviation of the integrated profile
