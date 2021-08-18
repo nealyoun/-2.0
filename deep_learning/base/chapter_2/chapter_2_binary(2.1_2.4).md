@@ -5,6 +5,7 @@
 ### Dataset
 
 1. Pulsar Dataset
+* dataset uploaded in kaggle & https://github.com/KONANtechnology/Academy.ALZZA/tree/master/data/chap02
 
 1. Feature
     1. Mean of the integrated profile
