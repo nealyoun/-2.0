@@ -1,4 +1,4 @@
-# NLP  :books:
+# Natural Language Process  :books:
 
 ### :mortar_board: Created for academical purposes
 mainly about NLP Algorithms and my study in progress
