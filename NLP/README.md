@@ -1,8 +1,10 @@
-# Natural Language Process  :books:
+# Natural Language Processing  :books:
 
 ### :mortar_board: Created for academical purposes
 mainly about NLP Algorithms and my study in progress
-
+* Colab
+* Tensorflow
+* Bert/Transformer/Elmo/LSTM/RNN
 ### :no_entry_sign: Rules
 
 * Atleast Once a Week
