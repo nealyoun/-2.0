@@ -90,7 +90,7 @@ parameter의 수가 늘어나는 만큼 더 많은 학습 데이터가 필요하
 
 즉, x > 0 일 때는 y = x, x ≤ 0일 때는 y = 0을로 정의된다
 
-![Untitled](MLP%20(Chapter%204)%206c05795f5c3a4c3583554852107ad0d4/Untitled%201.png)
+![Untitled 1](https://user-images.githubusercontent.com/54128055/135636511-7bbfa600-7e7b-4de6-9856-8e0cd94c95dc.png)
 
 - sigmoid, softmax 도 비선형 함수지만 지수 연산이 포함되어 복잡한 계산 과정으로 처리 부담이 크다. (softmax 함수는 벡터 원소들을 묶어 처리하기 때문에 은닉 계층 출력 처리에 부적절)
 - 반면 ReLU 함수는 위와 같이 꺽인 선 모양이기 때문에 비선형 함수이기에 비선형 특성을 추가할 수 있으며 빠른 계산 처리가 가능하다
