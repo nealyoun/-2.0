@@ -10,7 +10,7 @@ Status: In Progress
     - 단층 퍼셉트론(엄밀히 0개의 은닉 계층을 보유한 MLP)에서 하나 이상의 은닉 계층을 갖는 구조
     - 입력 벡터 → 중간 표현 → 출력 벡터
 
-![Untitled](MLP%20(Chapter%204)%206c05795f5c3a4c3583554852107ad0d4/Untitled.png)
+![Untitled](https://user-images.githubusercontent.com/54128055/135636654-1f4df96e-3a93-4db6-8611-550528292149.png)
 
 하나의 계층 안에 속한 퍼셉트론들은 동일한 입력을 공유 및및 각각의 출력 성분을 생성하지만 서로 어떠한 연결도 없어 영향을 주고받을 수 없음
 
@@ -35,7 +35,7 @@ but, 인접한 계층끼리는 앞 계층의 출력이 뒤 계층의 모든 퍼�
 
 은닉 계층: 출력 계층과는 다르게 위와 같은 제약이 없다. 따라서 은닉 계층의 수, 은닉의 폭은 신경망 설계자가 자유럽게 설정한다.
 
-![Untitled](MLP%20(Chapter%204)%206c05795f5c3a4c3583554852107ad0d4/Untitled.png)
+![Untitled](https://user-images.githubusercontent.com/54128055/135636654-1f4df96e-3a93-4db6-8611-550528292149.png)
 
 - hidden layer width: 해당 계층이 갖는 퍼셉트론의 수이자 은닉 벡터의 크기
 - input vector: 4
