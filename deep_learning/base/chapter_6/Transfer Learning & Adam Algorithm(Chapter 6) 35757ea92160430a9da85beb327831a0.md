@@ -13,7 +13,7 @@ Status: Completed
         - 수집방법 3가지 도메인 : amazon(웹), dSLR(디지털 카메라 촬영), webcam(웹캠 촬영)
         - 31가지 품목 : 배낭, 자전거, 파일캐비닛, 헤드폰, 키보드 등
 
-![Untitled](Transfer%20Learning%20&%20Adam%20Algorithm(Chapter%206)%2035757ea92160430a9da85beb327831a0/Untitled.png)
+![Untitled](https://user-images.githubusercontent.com/54128055/139453442-6584c2f6-9487-4782-892a-0ce92327eb80.png)
 
 ### 전이학습 (Transfer Learning)
 
@@ -91,11 +91,11 @@ $$⁍$$
     
     Momentum(관성) 방법은 미끄럼틀을 타고 평평한 지점까지 내려왔을때, 가속도에 의해 바로 멈추지 않듯이 gradient가 0에 가까워 졌을 때 바로 멈추지 않는다. Momentum은 현재 파라미터를 업데이트할 때, 이전 gradient들도 계산에 포함해 문제를 해결한다
     
-    ![Untitled](Transfer%20Learning%20&%20Adam%20Algorithm(Chapter%206)%2035757ea92160430a9da85beb327831a0/Untitled%201.png)
+    ![Untitled 1](https://user-images.githubusercontent.com/54128055/139453555-a685535f-6eab-4e23-a31f-fb1a890c600d.png)
     
     Momentum은 위의 식과 같이 이전 gradient의 영향력을 일정 비율 감소시켜 반영한다
     
-    ![Untitled](Transfer%20Learning%20&%20Adam%20Algorithm(Chapter%206)%2035757ea92160430a9da85beb327831a0/Untitled%202.png)
+    ![Untitled 2](https://user-images.githubusercontent.com/54128055/139453594-83a53f04-2fbd-4a72-b580-630b5eaffdee.png)
     
     전체 식으로 표현하면 위의 식과 같다. 보통 $gamma$ 값은 0.9를 사용한다
     
