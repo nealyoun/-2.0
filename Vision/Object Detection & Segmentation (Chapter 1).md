@@ -6,7 +6,7 @@ Status: Completed
 
 ## Object Detection과 Segmentation의 이해
 
-![Untitled](Object%20Detection%20&%20Segmentation%20(Chapter%201)%2040f1a5e1e24545d5aa5109d7ad9a13f1/Untitled.png)
+![Untitled](https://user-images.githubusercontent.com/54128055/140332678-6a976884-b52d-4321-a03d-eaed828e3633.png)
 
 - 2012 년 ImageNet (Image Classification Competition) 에서 우승한 **AlexNet**의 등장 이전까지는 고도화된 Algorithm을 통해 Image Classification과 Object Detection 수행
 - AlextNet은 **CNN**을 기반으로 한 딥러닝 모델을 이용해서 mAP (Object Detection 에서 사용되는 모델의 성능 평가 지표) 가 70% 후반 정도의 성능을 보여줌
@@ -17,7 +17,7 @@ Status: Completed
 - **Object Detection** : 여러 Object들에 대한 위치를 Bounding Box로 지정해서 Detecting
 - **Segmentation** : Detection보다 발전된 형태로 Pixel Level Detection 수행
 
-![Untitled](Object%20Detection%20&%20Segmentation%20(Chapter%201)%2040f1a5e1e24545d5aa5109d7ad9a13f1/Untitled%201.png)
+![Untitled 1](https://user-images.githubusercontent.com/54128055/140332734-f7b7e521-3068-43e5-8009-61f42a9d4a3f.png)
 
 Localization과 Detection은 Bounding Box Regression (Box의 좌표 예측) 과 Classification 두 개의 문제가 결합되어 있는 형태
 
@@ -33,19 +33,19 @@ Detection은 여러 Object를 이미지 내 임의 위치에서 찾기 때문에
 
 ### Object Detection의 주요 구성요소
 
-![Untitled](Object%20Detection%20&%20Segmentation%20(Chapter%201)%2040f1a5e1e24545d5aa5109d7ad9a13f1/Untitled%202.png)
+![Untitled 2](https://user-images.githubusercontent.com/54128055/140332767-3ba9012a-0ea9-46c0-b20a-b1c31d7801f8.png)
 
 **Region Proposal** : Object가 위치할 영역을 추정 (ex. 뒤에서 다룰 Selective Search, RPN)
 
 **Deep Learning Network 구성** : Feature Extraction 을 통해 이미지의 일부를 추출해 추상적 이미지를 가진 Feature Map을 도출하고 FPN 과정을 거쳐 Feature를 식별한 후 Classification 및 Bounding Box Regression 수행
 
-![Untitled](Object%20Detection%20&%20Segmentation%20(Chapter%201)%2040f1a5e1e24545d5aa5109d7ad9a13f1/Untitled%203.png)
+![Untitled 3](https://user-images.githubusercontent.com/54128055/140332808-809a1de0-2ce1-450c-b815-d535bea46f55.png)
 
 - Feature Extraction & Feature Pyramid Network
     
     **Feature Extraction**
     
-    ![Untitled](Object%20Detection%20&%20Segmentation%20(Chapter%201)%2040f1a5e1e24545d5aa5109d7ad9a13f1/Untitled%204.png)
+    ![Untitled 4](https://user-images.githubusercontent.com/54128055/140332834-4cc8ddc1-7aba-4c7f-ae1a-b84e5c39d3be.png)
     
     CNN 모델은 다음과 같이 Feature Extraction과 Classification으로 구성된다
     
@@ -55,7 +55,7 @@ Detection은 여러 Object를 이미지 내 임의 위치에서 찾기 때문에
     - Kernel과 Pooling(Sub-Sampling) 방법으로 이뤄짐
     - ex. 학습된 Kernel을 통해 Edge detection을 수행할 수 있다
     
-    ![Untitled](Object%20Detection%20&%20Segmentation%20(Chapter%201)%2040f1a5e1e24545d5aa5109d7ad9a13f1/Untitled%205.png)
+    ![Untitled 5](https://user-images.githubusercontent.com/54128055/140332881-4d5a4a42-9999-4a80-8e37-9ba8e9fe7f09.png)
     
     - Kernel은 parameter(weight)이고, Pooling은 아니다
     - Feature Extraction의 결과 값은 Activation Func. 을 통해 fully connected Neural Net 에 입력된다
@@ -78,7 +78,7 @@ Detection은 여러 Object를 이미지 내 임의 위치에서 찾기 때문에
 2. Feature Extraction을 통해 이미지를 학습해서 Classification을 수행
 3. 동시에 Bounding Box Regression을 통해 Object를 Detect
 
-![Untitled](Object%20Detection%20&%20Segmentation%20(Chapter%201)%2040f1a5e1e24545d5aa5109d7ad9a13f1/Untitled%206.png)
+![Untitled 6](https://user-images.githubusercontent.com/54128055/140332926-d1d86f26-1d61-4868-8a51-3c912e7c0898.png)
 
 ![Untitled](Object%20Detection%20&%20Segmentation%20(Chapter%201)%2040f1a5e1e24545d5aa5109d7ad9a13f1/Untitled%207.png)
 
