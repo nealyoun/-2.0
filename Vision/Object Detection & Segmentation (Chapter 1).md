@@ -80,13 +80,13 @@ Detection은 여러 Object를 이미지 내 임의 위치에서 찾기 때문에
 
 ![Untitled 6](https://user-images.githubusercontent.com/54128055/140332926-d1d86f26-1d61-4868-8a51-3c912e7c0898.png)
 
-![Untitled](Object%20Detection%20&%20Segmentation%20(Chapter%201)%2040f1a5e1e24545d5aa5109d7ad9a13f1/Untitled%207.png)
+![Untitled 7](https://user-images.githubusercontent.com/54128055/140333057-5f775186-c90d-440b-8f9f-5d8f6a83c1f7.png)
 
-![Untitled](Object%20Detection%20&%20Segmentation%20(Chapter%201)%2040f1a5e1e24545d5aa5109d7ad9a13f1/Untitled%208.png)
+![Untitled 8](https://user-images.githubusercontent.com/54128055/140333092-000068fb-cfca-4806-8975-7feef91a02ff.png)
 
 ### Challenge on Object Detection
 
-![Untitled](Object%20Detection%20&%20Segmentation%20(Chapter%201)%2040f1a5e1e24545d5aa5109d7ad9a13f1/Untitled%209.png)
+![Untitled 9](https://user-images.githubusercontent.com/54128055/140333132-51d4ea68-b760-4244-b815-0e0a6d47bf8e.png)
 
 다양한 Object가 존재하는 이미지의 어느 위치에서 Object를 Detect할 것인가?
 
@@ -103,9 +103,9 @@ Detection은 여러 Object를 이미지 내 임의 위치에서 찾기 때문에
     - Opt1. 다양한 형태의 Window를 각각 sliding
     - Opt2. Window Scale은 고정하고, 다양한 Scale의 이미지에 Window sliding 적용
     
-    ![Untitled](Object%20Detection%20&%20Segmentation%20(Chapter%201)%2040f1a5e1e24545d5aa5109d7ad9a13f1/Untitled%2010.png)
+    ![Untitled 10](https://user-images.githubusercontent.com/54128055/140333194-faa5ba85-1605-4b34-9026-819e6d4a8a2e.png)
     
-    ![Untitled](Object%20Detection%20&%20Segmentation%20(Chapter%201)%2040f1a5e1e24545d5aa5109d7ad9a13f1/Untitled%2011.png)
+    ![Untitled 11](https://user-images.githubusercontent.com/54128055/140333233-c29ea785-a8cb-4845-8a5f-ba4aa92eacc9.png)
     
     - 이미지가 Window보다 크면 Target Object를 Detect하지 못하거나, 이미지가 작아질 경우 Target Object 외 다른 Object가 포함되어 성능이 떨어짐
 - Object Detection의 초기 기법으로 활용
@@ -121,6 +121,6 @@ Detection은 여러 Object를 이미지 내 임의 위치에서 찾기 때문에
     3. Color, Texture, Size, Shape 등에 따라 유사도가 높은 Segment들을 Grouping 후 Region Proposal 리스트에 추가
     4. 2, 3번 과정 반복
 
-![Untitled](Object%20Detection%20&%20Segmentation%20(Chapter%201)%2040f1a5e1e24545d5aa5109d7ad9a13f1/Untitled%2012.png)
+![Untitled 12](https://user-images.githubusercontent.com/54128055/140333288-c8497128-1bd3-4327-a13f-d9e4470e92a5.png)
 
 **빠른 Detection과 높은 Recall 예측 성능을 동시에 만족하는 알고리즘**
