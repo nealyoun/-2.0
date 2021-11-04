@@ -1,8 +1,6 @@
 # Object Detection & Segmentation (Chapter 1)
 
-Due Date: 2021/10/27 → 2021/11/02
 Reference: https://blog.naver.com/cjh226/220809060935
-Status: Completed
 
 ## Object Detection과 Segmentation의 이해
 
