@@ -47,9 +47,9 @@ Convolution 연산에서 커널은(필터) input 영역의 특정 패턴이나 �
 - SAME padding 방식과 건너뛰기 처리가 없음을 가정,
     - yh = xh, yw = xw가 되며 출력은 [mb, xh, xw, ychn]의 형태가 된다
         
-        ![Screen Shot 2021-11-07 at 6.18.32 PM.png](CNN%20(Chapter%207%205~)%20c2a684f4ab2546d49f9d5c2511cc1612/Screen_Shot_2021-11-07_at_6.18.32_PM.png)
+        <img width="426" alt="Screen_Shot_2021-11-07_at_6 18 32_PM" src="https://user-images.githubusercontent.com/54128055/140649364-241a9bd2-e8f0-405c-bb74-a115dcbf84ee.png">
         
-        ![Screen Shot 2021-11-07 at 6.31.48 PM.png](CNN%20(Chapter%207%205~)%20c2a684f4ab2546d49f9d5c2511cc1612/Screen_Shot_2021-11-07_at_6.31.48_PM.png)
+        <img width="580" alt="Screen_Shot_2021-11-07_at_6 31 48_PM" src="https://user-images.githubusercontent.com/54128055/140649365-053b1ae3-998b-40ac-8bc2-5247996e7dfc.png">
         
 
 채널 추가에 따른 풀링 계층
@@ -80,7 +80,7 @@ Convolution 연산에서 커널은(필터) input 영역의 특정 패턴이나 �
 
 위 합성곱 계층 처리식을 역으로 정리하면 손실 기울기 계산을 다음과 같은 두 식으로 표현 됨:
 
-![Screen Shot 2021-11-07 at 6.58.42 PM.png](CNN%20(Chapter%207%205~)%20c2a684f4ab2546d49f9d5c2511cc1612/Screen_Shot_2021-11-07_at_6.58.42_PM.png)
+<img width="475" alt="Screen_Shot_2021-11-07_at_6 58 42_PM" src="https://user-images.githubusercontent.com/54128055/140649366-c064429d-b5b6-42a4-8a59-2265991a893a.png">
 
 위 식에서 $dx, dy, dk$는 각각 $x, y, k$ 성분의 손실 기울기를 의미
 
@@ -131,7 +131,7 @@ CNN은 보통 convolution layer와 pooling layer를 교대로 배치하는 형�
 - **Convolution layer**는 이미지의 해상도를 유지하면서 채널 수를 늘리는 역할 수행
 - **Pooling layer**는 채널 수를 유지하면서 이미지 해상도를 줄이는 역할
     
-    ![Screen Shot 2021-11-07 at 7.30.21 PM.png](CNN%20(Chapter%207%205~)%20c2a684f4ab2546d49f9d5c2511cc1612/Screen_Shot_2021-11-07_at_7.30.21_PM.png)
+    <img width="584" alt="Screen_Shot_2021-11-07_at_7 30 21_PM" src="https://user-images.githubusercontent.com/54128055/140649367-9717138d-0b74-4db2-a62c-3afb70454a1b.png">
     
 
 CNN과 FCP
