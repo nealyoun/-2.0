@@ -10,7 +10,7 @@
 - 완벽하게 detect 했다면 intersection과 union의 면적이 거의 대등하므로 $IoU \fallingdotseq 1$
     - 즉, IoU가 0 이면 교집합이 없다는 의미고, IoU가 1이면 두 박스가 완전히 일치하는 것
         
-        ![Screen Shot 2021-11-14 at 5.42.53 PM.png](Evaluation%20Metrice%20-%20IoU%20fd7f73181c58418988bec4d7c4b3120d/Screen_Shot_2021-11-14_at_5.42.53_PM.png)
+        <img width="390" alt="Screen_Shot_2021-11-14_at_5 42 53_PM" src="https://user-images.githubusercontent.com/54128055/142005538-82b4cb52-d37a-4a23-a24e-d1d2a40afd36.png">
         
         - Pascal VOC 기준
         - $IoU < 0.5$  → Poor Detection
