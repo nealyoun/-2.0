@@ -9,7 +9,7 @@
     - 동일한 물체를 가리키는 여러 박스의 중복을 제거하는 것이 목적
     - Detected 된 Object의 B.Box중에 비슷한 위치에 있는 box를 제거하고 가장 적합한 box를 선택하는 기법
         
-        ![Screen Shot 2021-11-16 at 8.01.04 PM.png](NMS(Non%20Max%20Suppression)%20dea58c3cc24241a5bace19760c4c96ff/Screen_Shot_2021-11-16_at_8.01.04_PM.png)
+        <img width="530" alt="Screen_Shot_2021-11-16_at_8 01 04_PM" src="https://user-images.githubusercontent.com/54128055/142005285-421bcb10-dbec-44bd-be74-cfdac0e26964.png">
         
         특정 클래스나 특정 박스들에 대해서 수행하는 작업이 아닌, **하나의 Detection 장면에서 모든 Bounding Box에 대해 수행하는 작업**
         
