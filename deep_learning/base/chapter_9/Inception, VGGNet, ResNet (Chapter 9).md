@@ -15,7 +15,7 @@ Status: Completed
 
 ## Inception Model-v1 (GoogLeNet)
 
-![스크린샷 2021-11-14 오후 5.17.17.png](Inception,%20VGGNet,%20ResNet%20(Chapter%209)%20ca892b51391f46ceb0834b165c1088b2/%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7_2021-11-14_%EC%98%A4%ED%9B%84_5.17.17.png)
+<img width="594" alt="스크린샷_2021-11-14_오후_5 17 17" src="https://user-images.githubusercontent.com/54128055/143047400-8f4a4a46-19f9-4818-8a3e-28758234c37b.png">
 
 - 이미지에 표현되어 있지 않지만, 각 Convolution의 출력은 복수의 채널을 가지며 각 분기(branch)의 처리 결과들을 별도의 채널에 차례로 나열해서 합병 (concat)
     - 각 갈래의 처리 결과는 채널 축을 제외한 나머지 세 축에 대해 같은 형태를 가져야 함
@@ -34,7 +34,7 @@ Status: Completed
 
 ([https://bskyvision.com/539](https://bskyvision.com/539))
 
-<img width="594" alt="스크린샷_2021-11-14_오후_5 17 17" src="https://user-images.githubusercontent.com/54128055/143044512-7d7a46cf-875c-40b8-ae6c-311a68ca1a66.png">
+<img width="615" alt="스크린샷_2021-11-14_오후_5 54 24" src="https://user-images.githubusercontent.com/54128055/143048442-f3c37d6d-f95f-4b77-bb33-9dfdaaec9b52.png">
 
 **개선된 Inception 모듈 vs 기본형 Inception 모듈**
 
@@ -61,13 +61,13 @@ Status: Completed
 
 1. **더 작은 합성곱으로 분해 (Factorization into smaller convolutions)**
     
-    <img width="615" alt="스크린샷_2021-11-14_오후_5 54 24" src="https://user-images.githubusercontent.com/54128055/143044605-c78c96bd-c03b-4afc-b27d-3f87d8c63675.png">
+    <img width="322" alt="스크린샷_2021-11-18_오후_4 30 27" src="https://user-images.githubusercontent.com/54128055/143047916-266bd991-9640-4cf6-a35e-89be57fb7d67.png">
     
     - 큰 커널을 n개의 3 x 3 커널로 분해하여 연산량과 parameter 의 수를 줄임 (출력 크기 동일)
     - 앞서 언급한 내용 참조
     - Linear vs ReLU
         
-        <img width="322" alt="스크린샷_2021-11-18_오후_4 30 27" src="https://user-images.githubusercontent.com/54128055/143044691-f656722b-6bbf-46cf-8cf1-c121c27284dc.png">
+        <img width="444" alt="스크린샷_2021-11-18_오후_4 32 27" src="https://user-images.githubusercontent.com/54128055/143047773-6bf75975-bce5-4756-b923-48263d843563.png">
         
         첫 번째 3 x 3 convolution 연산 후 Linear activation 적용, 두 번째는 ReLU activation 적용한 모델과 두 개의 3 x 3 convolution 연산 후 ReLU activation 적용한 모델의 성능을 비교한 그래프
         
@@ -76,7 +76,7 @@ Status: Completed
 
 1. **비대칭 합성곱 분해 (Asymmetric Convolutions)**
     
-    <img width="432" alt="스크린샷_2021-11-18_오후_4 37 29" src="https://user-images.githubusercontent.com/54128055/143044772-2e02a2d4-1d61-48fe-831e-e3e927d367ae.png">
+    <img width="432" alt="스크린샷_2021-11-18_오후_4 37 29" src="https://user-images.githubusercontent.com/54128055/143047957-0401b6c8-5fc8-4df2-bbca-a24668c4c190.png">
     
     - 3 x 3 convolution 을 1 x 3 convolution, 3 x 1 convolution 으로 분해
         - 저자의 실험에 따르면, 2 x 2 convolution 으로 분해하는 것보다 비대칭 분해가 성능이 더 좋음
@@ -84,7 +84,7 @@ Status: Completed
     
     if) n x n convolution 을 n x 1 , 1 x n convolution 으로 분해하면?
     
-    <img width="286" alt="스크린샷_2021-11-18_오후_5 07 09" src="https://user-images.githubusercontent.com/54128055/143044852-dccd69a4-a208-4eb9-9bd4-1e9a71c7e55b.png">
+    <img width="286" alt="스크린샷_2021-11-18_오후_5 07 09" src="https://user-images.githubusercontent.com/54128055/143048019-6e5dc2ba-197e-4a36-8a12-fc4d031f8ce1.png">
     
     - 7 x 7 convolution 을 7 x 1 , 1 x 7 convolution 분해한 형태
     - 실험에서 Feature Map size 가 12 - 20 일 때 효과가 좋았음
@@ -92,7 +92,7 @@ Status: Completed
 
 1. **보조분류기 (Utility of Auxiliary Classifiers)**
     
-    ![스크린샷 2021-11-18 오후 5.14.21.png](Inception,%20VGGNet,%20ResNet%20(Chapter%209)%20ca892b51391f46ceb0834b165c1088b2/%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7_2021-11-18_%EC%98%A4%ED%9B%84_5.14.21.png)
+    <img width="645" alt="스크린샷_2021-11-18_오후_5 14 21" src="https://user-images.githubusercontent.com/54128055/143048079-ac7309b4-3639-4565-ae20-0f38d2fd9067.png">
     
     - 해당 그림은 Liwei Wang 의 논문에 사용된 실험용 DNN의 구조, Supervision 이라는 보조분류기 사용
     - Auxiliary Classifier 를 통해 Vanishing Gradient 문제 해결
@@ -100,7 +100,8 @@ Status: Completed
         - 두 back propagation 이 더해지기 때문에 Gradient 가 작아지는 문제를 피할 수 있다
     - Auxiliary Classifier 의 적용 위치는 저자가 Iteration을 통해 Gradient 의 변화를 관찰하고 배치
         
-        ![스크린샷 2021-11-18 오후 5.20.08.png](Inception,%20VGGNet,%20ResNet%20(Chapter%209)%20ca892b51391f46ceb0834b165c1088b2/%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7_2021-11-18_%EC%98%A4%ED%9B%84_5.20.08.png)
+        <img width="635" alt="스크린샷_2021-11-18_오후_5 20 08" src="https://user-images.githubusercontent.com/54128055/143048138-414fbfee-15df-4819-9283-5dbedaf6a4ff.png">
+
         
     - 좌측 그림은 Auxiliary Classifier 미적용 / Iteration 이 증가할수록 Gradient 가 현저하게 감소
     - 우측 그림은 convolution X4 에서 Gradient 에 대한 그래프
@@ -115,13 +116,13 @@ Status: Completed
     - 일반적인 CNN 신경망은 Feature Map 의 사이즈를 줄이기 위해서 pooling 연산 사용
     - Pooling 연산을 먼저 하고 Inception Module 을 적용하면 Feature Map 의 사이즈가 줄어들어 연산량이 감소하지만, 정보의 손실에 의해 신경망의 표현력 (representation) 도 감소
         
-        ![스크린샷 2021-11-18 오후 8.18.50.png](Inception,%20VGGNet,%20ResNet%20(Chapter%209)%20ca892b51391f46ceb0834b165c1088b2/%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7_2021-11-18_%EC%98%A4%ED%9B%84_8.18.50.png)
+        ![스크린샷_2021-11-18_오후_8 18 50](https://user-images.githubusercontent.com/54128055/143048197-837794dd-3414-43d1-ab7b-6dd8f2fa0005.png)
         
     - Representational Bottlenet 을 피하기 위해 필터 수를 증가시킴
         - stride 2 인 pooling layer 와 convolution layer 를 병렬로 사용
         - 정보의 손실없이 연산량 감소
         
-        ![스크린샷 2021-11-18 오후 8.29.48.png](Inception,%20VGGNet,%20ResNet%20(Chapter%209)%20ca892b51391f46ceb0834b165c1088b2/%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7_2021-11-18_%EC%98%A4%ED%9B%84_8.29.48.png)
+        ![스크린샷_2021-11-18_오후_8 29 48](https://user-images.githubusercontent.com/54128055/143048646-10d02c7a-f9a1-4f81-9b09-7401fca4b2f7.png)
         
 
 ## Inception Model-v2
@@ -130,16 +131,17 @@ Status: Completed
 - 각 Inception Module 에서 convolution 연산은 0-padding 적용, 그 외 convolution layer 에는 미적용
 - Inception Model-v2 는 3가지 모듈 사용 (Factorization, Asymmetric, Expanded Filter)
     
-    ![스크린샷 2021-11-18 오후 8.37.17.png](Inception,%20VGGNet,%20ResNet%20(Chapter%209)%20ca892b51391f46ceb0834b165c1088b2/%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7_2021-11-18_%EC%98%A4%ED%9B%84_8.37.17.png)
+    ![스크린샷_2021-11-18_오후_8 37 17](https://user-images.githubusercontent.com/54128055/143048731-66da6db7-bb46-40e3-a361-b52ad04915ed.png)
     
-    ![스크린샷 2021-11-18 오후 8.37.28.png](Inception,%20VGGNet,%20ResNet%20(Chapter%209)%20ca892b51391f46ceb0834b165c1088b2/%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7_2021-11-18_%EC%98%A4%ED%9B%84_8.37.28.png)
+    ![스크린샷_2021-11-18_오후_8 37 28](https://user-images.githubusercontent.com/54128055/143048773-fd4b963a-44ff-46cc-a4ec-5fc293e6e986.png)
     
-    ![스크린샷 2021-11-18 오후 8.37.39.png](Inception,%20VGGNet,%20ResNet%20(Chapter%209)%20ca892b51391f46ceb0834b165c1088b2/%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7_2021-11-18_%EC%98%A4%ED%9B%84_8.37.39.png)
+    ![스크린샷_2021-11-18_오후_8 37 39](https://user-images.githubusercontent.com/54128055/143048795-d12ca6c8-7d1e-4193-87e1-a245f3cc336e.png)
     
 
 - 참고
     
-    ![스크린샷 2021-11-18 오후 8.42.29.png](Inception,%20VGGNet,%20ResNet%20(Chapter%209)%20ca892b51391f46ceb0834b165c1088b2/%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7_2021-11-18_%EC%98%A4%ED%9B%84_8.42.29.png)
+    ![스크린샷_2021-11-18_오후_8 42 29](https://user-images.githubusercontent.com/54128055/143048842-7cb88122-3040-4830-a32f-ce59d503b2cb.png)
+
     
     Label smoothing 이 왜 정답에 대한 확신을 감소시키는 건지 모르겠어연
     
@@ -161,7 +163,8 @@ Status: Completed
     - ResNet의 저자는 Depth의 영향에 대해 연구하다가 단순히 Depth를 늘렸을 때, 정확도 감소 현상 발견
     
 
-![스크린샷 2021-11-18 오후 8.49.26.png](Inception,%20VGGNet,%20ResNet%20(Chapter%209)%20ca892b51391f46ceb0834b165c1088b2/%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7_2021-11-18_%EC%98%A4%ED%9B%84_8.49.26.png)
+![스크린샷_2021-11-18_오후_8 49 26](https://user-images.githubusercontent.com/54128055/143048884-442c3fef-47ae-4587-9e83-1b647db049de.png)
+
 
 ### VGG-19 모델 구성
 
