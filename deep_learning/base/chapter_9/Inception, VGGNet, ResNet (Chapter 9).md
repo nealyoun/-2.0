@@ -34,7 +34,7 @@ Status: Completed
 
 ([https://bskyvision.com/539](https://bskyvision.com/539))
 
-![스크린샷 2021-11-14 오후 5.54.24.png](Inception,%20VGGNet,%20ResNet%20(Chapter%209)%20ca892b51391f46ceb0834b165c1088b2/%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7_2021-11-14_%EC%98%A4%ED%9B%84_5.54.24.png)
+<img width="594" alt="스크린샷_2021-11-14_오후_5 17 17" src="https://user-images.githubusercontent.com/54128055/143044512-7d7a46cf-875c-40b8-ae6c-311a68ca1a66.png">
 
 **개선된 Inception 모듈 vs 기본형 Inception 모듈**
 
@@ -61,13 +61,13 @@ Status: Completed
 
 1. **더 작은 합성곱으로 분해 (Factorization into smaller convolutions)**
     
-    ![스크린샷 2021-11-18 오후 4.30.27.png](Inception,%20VGGNet,%20ResNet%20(Chapter%209)%20ca892b51391f46ceb0834b165c1088b2/%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7_2021-11-18_%EC%98%A4%ED%9B%84_4.30.27.png)
+    <img width="615" alt="스크린샷_2021-11-14_오후_5 54 24" src="https://user-images.githubusercontent.com/54128055/143044605-c78c96bd-c03b-4afc-b27d-3f87d8c63675.png">
     
     - 큰 커널을 n개의 3 x 3 커널로 분해하여 연산량과 parameter 의 수를 줄임 (출력 크기 동일)
     - 앞서 언급한 내용 참조
     - Linear vs ReLU
         
-        ![스크린샷 2021-11-18 오후 4.32.27.png](Inception,%20VGGNet,%20ResNet%20(Chapter%209)%20ca892b51391f46ceb0834b165c1088b2/%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7_2021-11-18_%EC%98%A4%ED%9B%84_4.32.27.png)
+        <img width="322" alt="스크린샷_2021-11-18_오후_4 30 27" src="https://user-images.githubusercontent.com/54128055/143044691-f656722b-6bbf-46cf-8cf1-c121c27284dc.png">
         
         첫 번째 3 x 3 convolution 연산 후 Linear activation 적용, 두 번째는 ReLU activation 적용한 모델과 두 개의 3 x 3 convolution 연산 후 ReLU activation 적용한 모델의 성능을 비교한 그래프
         
@@ -76,7 +76,7 @@ Status: Completed
 
 1. **비대칭 합성곱 분해 (Asymmetric Convolutions)**
     
-    ![스크린샷 2021-11-18 오후 4.37.29.png](Inception,%20VGGNet,%20ResNet%20(Chapter%209)%20ca892b51391f46ceb0834b165c1088b2/%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7_2021-11-18_%EC%98%A4%ED%9B%84_4.37.29.png)
+    <img width="432" alt="스크린샷_2021-11-18_오후_4 37 29" src="https://user-images.githubusercontent.com/54128055/143044772-2e02a2d4-1d61-48fe-831e-e3e927d367ae.png">
     
     - 3 x 3 convolution 을 1 x 3 convolution, 3 x 1 convolution 으로 분해
         - 저자의 실험에 따르면, 2 x 2 convolution 으로 분해하는 것보다 비대칭 분해가 성능이 더 좋음
@@ -84,7 +84,7 @@ Status: Completed
     
     if) n x n convolution 을 n x 1 , 1 x n convolution 으로 분해하면?
     
-    ![스크린샷 2021-11-18 오후 5.07.09.png](Inception,%20VGGNet,%20ResNet%20(Chapter%209)%20ca892b51391f46ceb0834b165c1088b2/%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7_2021-11-18_%EC%98%A4%ED%9B%84_5.07.09.png)
+    <img width="286" alt="스크린샷_2021-11-18_오후_5 07 09" src="https://user-images.githubusercontent.com/54128055/143044852-dccd69a4-a208-4eb9-9bd4-1e9a71c7e55b.png">
     
     - 7 x 7 convolution 을 7 x 1 , 1 x 7 convolution 분해한 형태
     - 실험에서 Feature Map size 가 12 - 20 일 때 효과가 좋았음
