@@ -25,24 +25,24 @@ Language model, speech recognition, conversation model, image captioning 등
 → 순환 벡터는 동시점 입출력이 이루어지는 되먹임(feedback) 입력이 아니라 어떤 시간대 출력 후 다음 시간대의 입력으로 이용되는 지연 입력이다. (현재 state가 다음 state에 영향을 끼치는 구조)
 - 입력 벡터는 시간 대에 따른 내용은 변할지언정 벡터의 형태와 벡터 각 성분의 역할은 같다.(계층 h의 반복 사용, 파라미터 값 동일) → 한 장치를 반복적으로 이용하면 학습 효과 유지 및 데이터 마다 시간대 길이가 달라질 수 있는 시계열 데이터셋을 유연하게 처리할 수 있다.
 
-![Untitled](Recurrent%20Neural%20Nework;%20RNN%20(Chapter%2010)%206d0295b16f63450c951671683cc0d8fe/Untitled.png)
+![Untitled](https://user-images.githubusercontent.com/54128055/144066834-636a6030-da18-4d44-8e97-632334f53f11.png)
 
 - 순환 계층 h 계산식은 아래와 같다.
 (ht : new state / fw(활성화함수 with w) / ht-1 : old state / xt : input)
 
-![Untitled](Recurrent%20Neural%20Nework;%20RNN%20(Chapter%2010)%206d0295b16f63450c951671683cc0d8fe/Untitled%201.png)
+![Untitled 1](https://user-images.githubusercontent.com/54128055/144066884-64275cdf-a0d7-4a3b-bb19-9ba91fc7278e.png)
 
-![Untitled](Recurrent%20Neural%20Nework;%20RNN%20(Chapter%2010)%206d0295b16f63450c951671683cc0d8fe/Untitled%202.png)
+![Untitled 2](https://user-images.githubusercontent.com/54128055/144066889-705c9d17-b23d-4f01-a831-f282629a68c2.png)
 
 ### * static RNN vs. dynamic RNN
 
 - 실제 들어오는 데이터의 길이는 가변적이기 때문에 발생하는 처리 과정으로 static과 dynamic으로 나뉘게 되는데 아래 그림에서 보면 hello / hi / why 로 데이터 길이가 다르게 전달
 
-![Untitled](Recurrent%20Neural%20Nework;%20RNN%20(Chapter%2010)%206d0295b16f63450c951671683cc0d8fe/Untitled%203.png)
+![Untitled 3](https://user-images.githubusercontent.com/54128055/144066892-38c74e57-d55a-400d-a62f-a6ddfae4f7af.png)
 
 - static RNN :
     
-    ![Untitled](Recurrent%20Neural%20Nework;%20RNN%20(Chapter%2010)%206d0295b16f63450c951671683cc0d8fe/Untitled%204.png)
+    ![Untitled 4](https://user-images.githubusercontent.com/54128055/144066896-79786b32-043e-40f3-8d0a-3a542e6fb3fd.png)
     
     - 문장의 길이(seq_len)가 고정 되있음 (패딩으로)
     → 이 경우 이러한 padding을 넣어도, 각 모델에 있는 weight에 의해서 어떠한 값이 나오게 됨
@@ -51,7 +51,7 @@ Language model, speech recognition, conversation model, image captioning 등
 
 - dynamic RNN (deprecated) :
     
-    ![Untitled](Recurrent%20Neural%20Nework;%20RNN%20(Chapter%2010)%206d0295b16f63450c951671683cc0d8fe/Untitled%205.png)
+    ![Untitled 5](https://user-images.githubusercontent.com/54128055/144066897-e2eebdf7-7e01-49f2-8d63-d25ab7574176.png)
     
     - 문장의 길이(seq_len)만큼 recurrent가 일어남
     → 문자열 개수 만큼 값을 줘서 올바른 loss가 나오도록 유도
@@ -64,7 +64,7 @@ Language model, speech recognition, conversation model, image captioning 등
 - 입출력이 모두 시계열 데이터인 응용에서 입출력 시간대 축이 서로 다른 의미라면 하나의 순환 계층에서 처리하기 곤란? 
 —> 입력을 분석하는 순환 계층과 출력을 생성하는 순환 계층을 따로 만들어 연결해야 함 (인코더 - 디코더)단 Encode, Decode란 말부터 이해해보자.
 
-![Untitled](Recurrent%20Neural%20Nework;%20RNN%20(Chapter%2010)%206d0295b16f63450c951671683cc0d8fe/Untitled%206.png)
+![Untitled 6](https://user-images.githubusercontent.com/54128055/144066898-050063fc-02f8-43cd-af47-f6ad3b972a4a.png)
 
 먼저, **Encode란 말은 '암호(code)화 하는 행위'** 라고 할 수 있고, **Decode는 당연히 암호(code)를 푸는 행위**다.
 
@@ -86,7 +86,7 @@ Language model, speech recognition, conversation model, image captioning 등
 
 - 딥러닝에서 미니배치 단위로 처리가 이루어질 때 미니배치 안의 데이터들은 각각 길이가 다른 시계열 데이터들 일 수 있다.
 
-![Untitled](Recurrent%20Neural%20Nework;%20RNN%20(Chapter%2010)%206d0295b16f63450c951671683cc0d8fe/Untitled%207.png)
+![Untitled 7](https://user-images.githubusercontent.com/54128055/144066901-b0f0e2e9-6425-4d3a-bd50-387a6eef3c5e.JPG)
 
 - 경기 결과 하나를 저장하는 데 크기 4인 (경기일자, 상대국가, 득점, 실점) 벡터 공간이 필요하다.
 (but 나라 별 치른 경기 수가 서로 다름)
