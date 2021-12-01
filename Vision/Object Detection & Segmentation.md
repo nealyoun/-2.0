@@ -1,4 +1,4 @@
-# Object Detection & Segmentation (Chapter 1)
+# Object Detection & Segmentation
 
 Reference: https://blog.naver.com/cjh226/220809060935
 
