@@ -1,7 +1,5 @@
 # OpenCV
-
 ---
-
 ## Python 기반 주요 image library
 
 - PIL (python image library)
@@ -26,7 +24,7 @@
     - **OpenCV를 이용하여 이미지를 불러오면 RGB 형태가 아닌 BGR 형태로 로딩**
     - cvtColor()를 이용하여 BGR을 RGB로 변환
         
-        ![Screen Shot 2021-12-01 at 3.51.23 PM.png](OpenCV%20a1186a35e1c14705a16e5a951722d0dd/Screen_Shot_2021-12-01_at_3.51.23_PM.png)
+        <img width="502" alt="Screen_Shot_2021-12-01_at_3 51 23_PM" src="https://user-images.githubusercontent.com/54128055/144253616-307b8add-a8d0-4935-8de6-8d92f7260b8a.png">
         
     - imwrite()를 이용하여 파일 쓰기 기능 제공. 하지만 imread()로 인해 BGR형태로 되어 있는 이미지 배열을 다시 RGB 형태로 변환하여 저장하는 것을 주의
     - OpenCV Windows Frame 인터페이스
