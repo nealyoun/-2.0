@@ -11,15 +11,6 @@ Status: Completed
 2. 정보의 장거리 전달의 어려움 (Long Term Dependencies)
     
     → 위 문제를 해결하기 위해 lstm 계층을 이용했으며 이를 **LSTM 신경망** 이라고 부름
-    
-
-```markdown
-"바르셀로나에 여행을 왔는데 건물도 예쁘고 먹을 것도 맛있었어. 
- 그런데 글쎄 태호한테 전화가 왔어. 어디냐고 묻더라구 그래서 나는 말했지. 
- 저 여행왔는데요. 여기 (___)" 
-
-빈칸에 들어갈 알맞은 말은?
-```
 
 ## Vanishing & Exploding Gradient
 
