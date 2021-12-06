@@ -28,7 +28,7 @@ Status: Completed
 - **Vanishing Gradient**: 역전파 과정에서 계층을 거칠수록 손실 기울깃값이 점점 작아져 초반 계층의 학습이 이루어지지 않는 경우 → 학습 진척이 어려움
 - **Exploding Gradient**: 계층을 거칠수록 손실 기울기가 점차 커지면서 가중치들이 비정상적으로 크게 업데이트 되는 경우 → 한 번만 일어나도 학습된 파라미터값이 크게 훼손됨
     
-    ![Untitled](LSTM%20&%20(GRU)%205ccce2317c3647b0bb5989eeef79d885/Untitled.png)
+    ![Untitled](https://user-images.githubusercontent.com/54128055/144828309-899e51b8-b90d-4da5-9062-4c02920c80df.png)
     
     - *chain rule을 통해 기울기를 구할 때 곱해지는 값(a ~ f)이 1보다 작으면 곱할수록 점점 작아지게 된다. 즉, 기울기는 매우 작은 값을 갖게되며 이에 학습률을 곱해 weight를 업데이트하게 되면 위처럼 0.3 → 0.29로 되는 것 처럼 weight는 거의 변하지 않는다. 이를 멈춤 상태라 하며 weight는 최적의 값에 도달하지 못한다.*
     - *chain rule에서 1보다 큰 값이 곱해지면서 weight 값이 발산하게된다. 이또한 weight는 최적의 값에 도달하지 못한다.*
@@ -76,21 +76,21 @@ Status: Completed
 
 - RNN의 문제점을 해결하기 위해 셀 구조를 변형시킨 것이 LSTM
     
-    ![Untitled](LSTM%20&%20(GRU)%205ccce2317c3647b0bb5989eeef79d885/Untitled%201.png)
+    ![Untitled 1](https://user-images.githubusercontent.com/54128055/144828313-64214e86-5c23-4bda-a1be-3f620193a5e4.png)
     
-    ![Untitled](LSTM%20&%20(GRU)%205ccce2317c3647b0bb5989eeef79d885/Untitled%202.png)
+    ![Untitled 2](https://user-images.githubusercontent.com/54128055/144828314-442d5982-6e3d-4104-be2e-accc3f1854b2.png)
     
     - RNN의 hidden state에 cell-state를 추가한 구조
     - RNN hidden state: $h_t = tanh(W_{x}x_{t} + W_{h}h_{t-1} + b)$
 - 계속 곱해서 문제가 발생하기 때문에 셀 구조를 더하는 걸로 바꾸며 이를 **cell state** 라고 한다
 - cell state는 컨베이어 벨트에 비유되는데, 전체 chain을 따라 직진하며 약간의 작은 선형 상호작용이 있을 뿐이다
 
-![Untitled](LSTM%20&%20(GRU)%205ccce2317c3647b0bb5989eeef79d885/Untitled%203.png)
+![Untitled 3](https://user-images.githubusercontent.com/54128055/144828315-95083698-ade6-4da6-b08a-b5df71341b06.png)
 
 - LSTM hidden state:
     - **forget gate**
         
-        ![Untitled](LSTM%20&%20(GRU)%205ccce2317c3647b0bb5989eeef79d885/Untitled%204.png)
+        ![Untitled 4](https://user-images.githubusercontent.com/54128055/144828317-a41d47ef-c7f1-421d-8319-c7be9c7c79db.png)
         
         기억을 삭제하기 위한 게이트. 현재 시점 $t$의 $x$ 값과 이전 시점 $t-1$의 hidden state가 시그모이드 함수를 지난다
         
@@ -101,7 +101,7 @@ Status: Completed
     
     - **input gate**
         
-        ![Untitled](LSTM%20&%20(GRU)%205ccce2317c3647b0bb5989eeef79d885/Untitled%205.png)
+        ![Untitled 5](https://user-images.githubusercontent.com/54128055/144828319-a83bae17-edf8-4cc3-aa26-40777ac2e23f.png)
         
         input gate는 현재의 정보를 기억하기 위한 게이트. 현재 시점 $t$의 $x$값과 input gate로 이어지는 가중치 $W_{xi}$를 곱한 값과 이전 시점 $t-1$의 hidden state가 input gate로 이어지는 가중치 $W_{hi}$를 곱한 값을 더하여 시그모이드 함수를 지난다
         
@@ -115,7 +115,7 @@ Status: Completed
         
     - **cell state (long term, 장기 상태), cell memory**
         
-        ![Untitled](LSTM%20&%20(GRU)%205ccce2317c3647b0bb5989eeef79d885/Untitled%206.png)
+        ![Untitled 6](https://user-images.githubusercontent.com/54128055/144828321-628a0eae-ef82-4bda-b89d-1df6fc1649f1.png)
         
         cell state를 LSTM에서는 장기 상태라고 부른다. 우선 forget gate에서 일부 기억을 잃은 상태이다
         
@@ -134,7 +134,7 @@ Status: Completed
     
     - **output gate & hidden state (short term, 단기 상태)**
         
-        ![Untitled](LSTM%20&%20(GRU)%205ccce2317c3647b0bb5989eeef79d885/Untitled%207.png)
+        ![Untitled 7](https://user-images.githubusercontent.com/54128055/144828323-eea545b3-85b3-4740-99a5-21aae815f351.png)
         
         output gate는 현재 시점 $t$의 $x$값과 이전 시점 $t-1$의 hidden state가 sigmoid 함수를 통과한다. 해당 결괏값은 현재 시점 $t$의 hidden state를 결정한다
         
@@ -149,7 +149,7 @@ Status: Completed
 
 $tanh x = \frac{e^x - e^x}{e^x + e^x} = \frac{e^{2x} - 1}{e^{2x} + 1}$
 
-![Untitled](LSTM%20&%20(GRU)%205ccce2317c3647b0bb5989eeef79d885/Untitled%208.png)
+![Untitled 8](https://user-images.githubusercontent.com/54128055/144828324-849bdc59-a0cf-4d3d-9edf-85e433619db9.png)
 
 **sigmoid 함수**
 
@@ -176,18 +176,18 @@ reference: [https://ratsgo.github.io/natural language processing/2017/03/09/rnnl
 - $dy_t$를 시작으로 순차적으로 backword process 진행
 - $df_t, di_t, dg_t, do_t$를 구하기까지의 프로세스는 RNN과 유사
 
-![Untitled](LSTM%20&%20(GRU)%205ccce2317c3647b0bb5989eeef79d885/Untitled%209.png)
+![Untitled 9](https://user-images.githubusercontent.com/54128055/144828327-f89be5b0-8841-40ce-bf70-0514175f1efd.png)
 
 - $dH_t$ 를 구하는 과정이 LSTM backward pass의 핵심
     - $H_t$ 는 $f_t, i_t,o_t, g_t$ 로 구성된 행렬
     - 따라서 각각의 해당하는 gradient를 합쳐서(merge) $dH_t$
     - $f_t, i_t,o_t$ 의 활성화 함수는 sigmoid, $g_t$ 의 활성화 함수는 $tanh$ 이기 때문에 각각의 활성화 함수에 대한 local gradient를 구하고 각각의 흘러들어온 gradient를 곱함
         
-        ![Untitled](LSTM%20&%20(GRU)%205ccce2317c3647b0bb5989eeef79d885/Untitled%2010.png)
+        ![Untitled 10](https://user-images.githubusercontent.com/54128055/144828329-a266e8f9-6a29-4e1e-b92b-546538402913.png)
         
 - 위에서 $df_t, di_t, dg_t, do_t$를 합쳐서 구한 $dH_t$는 다시 RNN과 같은 방식으로 backpropagate
 
-![Untitled](LSTM%20&%20(GRU)%205ccce2317c3647b0bb5989eeef79d885/Untitled%2011.png)
+![Untitled 11](https://user-images.githubusercontent.com/54128055/144828331-fec88432-8c20-4270-a79e-12c5fb9ea7d0.png)
 
 ---
 
@@ -200,7 +200,7 @@ reference: [https://ratsgo.github.io/natural language processing/2017/03/09/rnnl
     - LSTM 셀의 간소화된 버전
 - 3개의 gate 가 있었던 LSTM과 달리 **update gate, reset gate**로 gate의 수를 2개로 줄임
     
-    ![Untitled](LSTM%20&%20(GRU)%205ccce2317c3647b0bb5989eeef79d885/Untitled%2012.png)
+    ![Untitled 12](https://user-images.githubusercontent.com/54128055/144828333-b692491a-8ca9-4212-b540-43664b040fa7.png)
     
     - $r_t = \sigma(W^T_{xr}\cdot x_t + W^T_{hr}\cdot h_{t-1} + b_r )$
     - $z_t = \sigma(W^T_{xz}\cdot x_t + W^T_{hz}\cdot h_{t-1} + b_z )$
@@ -251,7 +251,7 @@ model.add(Dense(1, activation = "sigmoid"))
 
 ## Bidirectional Recurrent Neural Network
 
-![Untitled](LSTM%20&%20(GRU)%205ccce2317c3647b0bb5989eeef79d885/Untitled%2013.png)
+![Untitled 13](https://user-images.githubusercontent.com/54128055/144828334-9da699e5-802f-410c-8f3f-632e57957233.png)
 
 - 역방향으로 입력을 참고하는 RNN을 추가하여 양방향으로 만든 것
 - 주황색 기존의 RNN 모델, 초록색은 text를 뒤에서 앞으로 읽은 모델
