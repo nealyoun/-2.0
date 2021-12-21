@@ -38,7 +38,8 @@ if) A 항목 $logit$ $3$ , B 항목 $logit$ $1$ 이라면
         - Loss Function 도 확률을 계산하지 않고 $logit$ 으로 계산 가능 (순전파는 $logit$ 으로만 처리 가능)
     - $logit$ 은 $[-inf, inf]$ 인데 확률은 $[0, 1]$ **(로짓을 확률 대신 쓸 수 있는 이유 ??)**
 
-![Untitled](Multiclass%20Classification%20(Chapter%203)%20b4b1ed298b2946ecb1e5b3fec5caa156/Untitled.png)
+![Untitled](https://user-images.githubusercontent.com/54128055/146949216-b25d1ce5-162b-426c-bb86-ce320aaf1c89.png)
+
 
 **SoftMax Function 을 통해 확률분포 벡터를 구하는 경우**
 
