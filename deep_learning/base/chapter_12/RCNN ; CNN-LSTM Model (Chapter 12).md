@@ -14,7 +14,7 @@ Status: Completed
 - 동영상 데이터는 5차원 데이터로 처리
     - [미니배치, 시간(프레임 번호), 이미지행, 이미지열, 채널] > 파이토치랑 텐서가 순서가 다르다?
 
-![스크린샷 2021-12-05 오후 1.44.49.png](RCNN%20;%20CNN-LSTM%20Model%20(Chapter%2012)%203d61b1927f3c449aa04333ae55b4ca4a/%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7_2021-12-05_%EC%98%A4%ED%9B%84_1.44.49.png)
+<img width="365" alt="스크린샷_2021-12-05_오후_1 44 49" src="https://user-images.githubusercontent.com/54128055/147530876-fc632f2a-11fd-4e25-ab51-10ac0017a782.png">
 
 **주의! 시계열 데이터는 각 데이터의 첫 값에 데이터의 길이 저장 & 첫 시간대의 다른 차원 값에는 의미없는 값**
 
@@ -32,13 +32,13 @@ Status: Completed
 
 **신경망 구성 및 각 계층 입출력 데이터 형태 표기**
 
-![스크린샷 2021-12-05 오후 1.58.44.png](RCNN%20;%20CNN-LSTM%20Model%20(Chapter%2012)%203d61b1927f3c449aa04333ae55b4ca4a/%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7_2021-12-05_%EC%98%A4%ED%9B%84_1.58.44.png)
+<img width="223" alt="스크린샷_2021-12-05_오후_1 58 44" src="https://user-images.githubusercontent.com/54128055/147530880-7d81326f-6022-4eab-9caa-a6b050301fee.png">
 
 - 최초 입력 [10, 101, 90, 120, 3] ([미니배치, 시간, 이미지 행, 이미지 열, 채널])
 - 101은 시계열 데이터의 최대 길이 100에 길이 정보 1을 더한 값
 - 원본 해상도는 1,440 x 1,080 이어서, 전처리 작업으로 가로 세로 1/12 로 줄임
 
-![스크린샷 2021-12-05 오후 3.40.38.png](RCNN%20;%20CNN-LSTM%20Model%20(Chapter%2012)%203d61b1927f3c449aa04333ae55b4ca4a/%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7_2021-12-05_%EC%98%A4%ED%9B%84_3.40.38.png)
+<img width="380" alt="스크린샷_2021-12-05_오후_3 40 38" src="https://user-images.githubusercontent.com/54128055/147530881-36eec9f0-cca9-4207-ae18-7c5b2e091356.png">
 
 - 전체적인 신경망 구조 : (seqwrap 계층 + lstm 계층 = )은닉 계층 + 출력계층
 - seqwrap 계층은 미니배치 축과 시간대 축을 묶어 변형된 미니배치 데이터로 변형
@@ -53,7 +53,7 @@ Status: Completed
 
 장면전환 : 인접한 프레임 사이에서 이미지 내용이 크게 바뀌는 현상 (0번 프레임 포함)
 
-![스크린샷 2021-12-05 오후 7.02.35.png](RCNN%20;%20CNN-LSTM%20Model%20(Chapter%2012)%203d61b1927f3c449aa04333ae55b4ca4a/%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7_2021-12-05_%EC%98%A4%ED%9B%84_7.02.35.png)
+<img width="395" alt="스크린샷_2021-12-05_오후_7 02 35" src="https://user-images.githubusercontent.com/54128055/147530883-887e2ca3-17c4-4cc0-a869-23e9630faa87.png">
 
 - 위 사진에서 6-7, 10-11, 13-14 프레임 사이에서 장면 전환 발생
 - 18 프레임으로 구성된 영상 데이터를 시계열 데이터로 저장하려면 길이 정보를 포함해 19칸의 공간 필요
@@ -63,7 +63,8 @@ Status: Completed
 
 ## Labeled Data
 
-![스크린샷 2021-12-06 오후 3.23.29.png](RCNN%20;%20CNN-LSTM%20Model%20(Chapter%2012)%203d61b1927f3c449aa04333ae55b4ca4a/%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7_2021-12-06_%EC%98%A4%ED%9B%84_3.23.29.png)
+<img width="400" alt="스크린샷_2021-12-06_오후_3 23 29" src="https://user-images.githubusercontent.com/54128055/147530884-894ccbab-7a08-46cb-897c-39a05e643bb2.png">
+
 
 - 장면전환 여부를 나타내는 이진값 사용
 - 시간, 장면 전환 여부, 미니배치 정보를 담는 3차원 데이터 (첫 값에 데이터의 길이 정보)
