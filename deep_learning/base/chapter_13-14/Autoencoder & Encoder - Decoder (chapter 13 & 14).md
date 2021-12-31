@@ -10,7 +10,7 @@ e.g. 차원축소, 표현/특징학습, 준지도학습 등
 
 ## 13.1 오토인코더 구조
 
-![Untitled](Autoencoder%20&%20Encoder%20-%20Decoder%20(chapter%2013%20&%2014)%201dee813f29d64bb395169d42a3b93775/Untitled.png)
+![Untitled](https://user-images.githubusercontent.com/54128055/147835463-284af859-31ef-4ee5-b534-ab013d8990b4.png)
 
 - 위 그림처럼 인코더, 디코더 두 부분으로 구성되며, 디코더의 출력은 인코더의 입력과 같은 형태를 보임
 - 출력은 입력과 동일한 형태를 가질 뿐만 아니라 내용까지도 최대한 비슷하게 재현(representation)되어야 하며 입력과 출력 사이의 평균 제곱오차를 손실 함수로 삼아 학습
@@ -40,14 +40,14 @@ but 오토인코더 자체로는 별 쓸모가 없다. (비지도학습만으로
 e.g. 저화질 사진에 일부 고화질 데이터를 넣어서 출력 값과 비교
 - 학습, 평가 시점에는 잡음 주입기를 사용하지만 실제용도로 사용되는 정규화 시점부터는 동작 중지한다.
 
-![Untitled](Autoencoder%20&%20Encoder%20-%20Decoder%20(chapter%2013%20&%2014)%201dee813f29d64bb395169d42a3b93775/Untitled%201.png)
+![Untitled 1](https://user-images.githubusercontent.com/54128055/147835461-03031a1a-067b-4f08-8d6a-abfcf1291dcc.png)
 
 ## 13.4 유사 이진 코드 생성과 시맨틱 해싱
 
 - 오토인코더가 활용될 수 있는 분야로 시맨틱 해싱을 이용한 정보검색 분야다.
 시맨틱 해싱은 검색 대상 컨텐츠를 적당한 수의 비트 정보로 표현된 이진 백터 공간에 대응시켜 쉽고 빠르게 정보 검색을 하는 방법
 
-![Untitled](Autoencoder%20&%20Encoder%20-%20Decoder%20(chapter%2013%20&%2014)%201dee813f29d64bb395169d42a3b93775/Untitled%202.png)
+![Untitled 2](https://user-images.githubusercontent.com/54128055/147835462-81bb5937-628d-476d-be8a-21ed966a6c09.png)
 
 - 위 그림처럼 척추/무척추, 육상/해상, 육식/초식에 따라 세 가지 비트값이 부여될 때 (이진분류, 32비트면 2^32, 약 40억개)
 척추동물(1xx), 육상동물(x1x), 육식동물(xx1)인 사자에 대한 콘텐츠는 111의 코드 값 부여
@@ -74,7 +74,7 @@ PCA 선형변환, AE비선형 → 실생활에서는 AE에서는 비선형이 �
     - 오토인코더 학습 단계
     - 지도 학습 단계
 
-![Screen Shot 2021-12-23 at 9.49.40 PM.png](Autoencoder%20&%20Encoder%20-%20Decoder%20(chapter%2013%20&%2014)%201dee813f29d64bb395169d42a3b93775/Screen_Shot_2021-12-23_at_9.49.40_PM.png)
+![Screen_Shot_2021-12-23_at_9 49 40_PM](https://user-images.githubusercontent.com/54128055/147835456-60ed8eb8-c0b8-45ad-b18e-0fd56d2a7746.png)
 
 ### 오토인코더 학습 단계
 
@@ -106,7 +106,7 @@ PCA 선형변환, AE비선형 → 실생활에서는 AE에서는 비선형이 �
         - 정보의 압축 효과를 기대
 - 입력 형태와 출력 형태가 서로 독립, 즉 각각 어떤 형태든 무관
 
-![Screen Shot 2021-12-23 at 11.11.11 PM.png](Autoencoder%20&%20Encoder%20-%20Decoder%20(chapter%2013%20&%2014)%201dee813f29d64bb395169d42a3b93775/Screen_Shot_2021-12-23_at_11.11.11_PM.png)
+![Screen_Shot_2021-12-23_at_11 11 11_PM](https://user-images.githubusercontent.com/54128055/147835459-c6d82cfc-6884-44f3-ba77-8a64757fdf27.png)
 
 ### 인코더-디코더의 활용
 
