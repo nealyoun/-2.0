@@ -17,7 +17,7 @@ Status: Completed
 - encoder : 입력 문장의 모든 단어들을 순차적으로 입력받은 뒤, 모든 단어 정보들을 압축한 벡터 생성 (context vector)
 - decoder : context vector 를 encoder 로부터 전달받아 번역된 단어를 한 개씩 순차적으로 출력
 
-![Untitled](Attention%209dd9aa92d1a04a178be0304d4781273d/Untitled.png)
+![Untitled](https://user-images.githubusercontent.com/54128055/148401672-f8112178-e42c-441f-b9ec-80d187c4059f.png)
 
 **process**
 
@@ -25,11 +25,11 @@ Status: Completed
 - encoder RNN 셀의 마지막 시점의 hidden state (context vector) 를 decoder (RNN Language Model) RNN 셀로 넘겨줌
 - context vector 는 decoder RNN 셀의 첫 hidden state 에 사용
 
-![Untitled](Attention%209dd9aa92d1a04a178be0304d4781273d/Untitled%201.png)
+![Untitled 1](https://user-images.githubusercontent.com/54128055/148401651-dfabf8bf-0210-45c3-b3a4-09200317669a.png)
 
 참고!
 
-- <s> 는 <sos>, <bos>, <Go> 로 사용하기도 함
+- s 는 sos, bos, Go 로 사용하기도 함
 - Affine Layer 는 hidden state 를 Input 으로 받아 분류 갯수로 출력해주는 Feedforward Network
 
 ***Sequence 길이와 순서를 자유롭게 해서 서로 다른 도메인으로 출력을 변환하는 task 에 이상적인 모델!***
@@ -53,7 +53,7 @@ Decoder 에서 출력을 생성하는 매 time step 마다 Encoder 의 hidden st
 
 e.g. dot-product, scaled dot-product, general, concat(Bahdanau), location-base, self etc.
 
-![Untitled](Attention%209dd9aa92d1a04a178be0304d4781273d/Untitled%202.png)
+![Untitled 2](https://user-images.githubusercontent.com/54128055/148401658-d402f9ae-247a-44d4-a381-0e359b0e11bb.png)
 
 ### **Attention Function**
 
@@ -63,7 +63,7 @@ e.g. dot-product, scaled dot-product, general, concat(Bahdanau), location-base, 
 - K (Keys) : 모든 시점의 Encoder 셀의 hidden state (h)
 - V (Values) : 모든 시점의 Encoder 셀의 hidden state (a)
 
-![Untitled](Attention%209dd9aa92d1a04a178be0304d4781273d/Untitled%203.png)
+![Untitled 3](https://user-images.githubusercontent.com/54128055/148401660-a449c468-cc0b-47c7-a3a3-7020bce8d275.png)
 
 ### Dot-Product Attention
 
@@ -76,18 +76,18 @@ e.g. dot-product, scaled dot-product, general, concat(Bahdanau), location-base, 
 - Encoder 의 hidden state : $h_i$ 일 때,
 - $Attention\ score(s_t, h_i) = s_t^Th_i$
     
-    ![Untitled](Attention%209dd9aa92d1a04a178be0304d4781273d/Untitled%204.png)
+    ![Untitled 4](https://user-images.githubusercontent.com/54128055/148401662-fda0db81-3cb0-4a52-a1fc-c308628e1e54.png)
     
 - 내적 결과 값에 softmax 함수를 적용해서 Attention Distribution 생성
 - $e^t=[s^T_th_1,...,s^T_th_N]$ 에 대해, $\alpha^t = softmax(e^t)$
 
-![Untitled](Attention%209dd9aa92d1a04a178be0304d4781273d/Untitled%205.png)
+![Untitled 5](https://user-images.githubusercontent.com/54128055/148401665-93af9d26-e8cd-40b9-965e-03a0db97e8c5.png)
 
 - Attention Distribution 은 **각 Encoder hidden state 의 중요도** 의미
 
 ***context vector = Attention Value*** $a_t = \sum^N_{i=1}\alpha^t_ih_i$
 
-![Untitled](Attention%209dd9aa92d1a04a178be0304d4781273d/Untitled%206.png)
+![Untitled 6](https://user-images.githubusercontent.com/54128055/148401667-ba174d4f-cabc-42e2-ad40-9a125dbe41cc.png)
 
 **Attention 에서 context vector 는 Encoder 의 문맥을 포함하고 있음**
 
@@ -99,7 +99,7 @@ e.g. dot-product, scaled dot-product, general, concat(Bahdanau), location-base, 
     
     Dense Layer 에 연결하고 tanh func. 적용
     
-    ![Untitled](Attention%209dd9aa92d1a04a178be0304d4781273d/Untitled%207.png)
+    ![Untitled 7](https://user-images.githubusercontent.com/54128055/148401669-446b92de-47a5-40de-8d2f-eb3f4bb94a2b.png)
     
     - $\tilde s_t = tanh(W_c[a_t;s_t]+b_c)$
 - $\tilde s_t$ 를 출력층의 Input 으로 사용해서 예측 벡터 생성
