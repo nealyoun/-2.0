@@ -10,7 +10,7 @@
 
 [y = class 0](https://www.notion.so/ab1799049a464e73b38ef50f29286d0f)
 
-![Untitled](Log%20Loss%208d9885c70b504922899942aebc36f3e1/Untitled.png)
+![Untitled](https://user-images.githubusercontent.com/54128055/148557745-bcdd212b-8cef-4aa3-98c9-5644a34230cb.png)
 
 값이 적어질수록 (-log(x) 그래프와 같이) 좋은 지표이다
 
