@@ -21,7 +21,7 @@ reference : [https://ganghee-lee.tistory.com/35](https://ganghee-lee.tistory.com
 
 **2-stage detector**
 
-![스크린샷 2021-12-07 오후 3.58.28.png](Regions%20with%20Convolutional%20Neural%20Network%204bf480aba85443b0b9ae5ce196df2389/%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7_2021-12-07_%EC%98%A4%ED%9B%84_3.58.28.png)
+<img width="860" alt="스크린샷_2021-12-07_오후_3 58 28" src="https://user-images.githubusercontent.com/54128055/149335356-04b360b7-5014-4736-8702-37ca4ed6b897.png">
 
 Selective Search, Region proposal network 와 같은 알고리즘이나 네트워크를 통해 Object가 있을 만한 영역 (RoI ; Region of Interest) 추출
 
@@ -31,7 +31,7 @@ Deep Learning Models : R-CNN, Fast R-CNN, Faster R-CNN, etc.
 
 **1-stage detector**
 
-![스크린샷 2021-12-07 오후 4.01.20.png](Regions%20with%20Convolutional%20Neural%20Network%204bf480aba85443b0b9ae5ce196df2389/%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7_2021-12-07_%EC%98%A4%ED%9B%84_4.01.20.png)
+<img width="660" alt="스크린샷_2021-12-07_오후_4 01 20" src="https://user-images.githubusercontent.com/54128055/149335358-45a8b0e4-c501-4df2-886c-7f7e9294d98f.png">
 
 RoI 영역을 추출하지 않고, 전체 Image 에 대해 Convolution Network 로 Classification, Bounding Box Regression 수행
 
@@ -42,8 +42,6 @@ RoI 영역을 추출하지 않고, 전체 Image 에 대해 Convolution Network �
 Deep Learning Models : YOLO
 
 - Object Detection 에서 Region Proposal 을 하는 이유
-    
-    안녕하십니까,
     
     오브젝트 detection이 classification 대비 대표적인 어려운점이
     
@@ -56,7 +54,6 @@ Deep Learning Models : YOLO
     특히 여러개의 오브젝트가 한 이미지에 있을 때 아무리 loss함수를 잘 만들어도 딥러닝에서 이를 정확히 찾아내기가 어렵습니다. 서로 다른 이미지에는 여러개의 서로 다른 오브젝트들이 서로 다른 위치에 놓여 있기 때문에 loss 함수가 쉽게 수렴해서 최적으로 오브젝트 detect를 해주기 어렵습니다.
     
     그래서 object가 있을 만한 위치를 먼저 찾아줍니다. 이 오브젝트가 있을 만한 힌트를 먼저 가진 다음에 (즉 딥러닝 학습시 오브젝트에 대한 제약 조건을 강화해서) 이를 기반으로 bounding box regression등의 학습을 진행하여 성능을 향상 시킵니다.
-    
     object 가 있을 것으로 예상되는 regions(bounding boxes) 에서 다시 한번 위치를 알기 위한 regression 이 이루어진다
     
 
@@ -68,7 +65,7 @@ Deep Learning Models : YOLO
     - 자동으로 Object 가 있을만한 위치를 찾아주는 알고리즘 → Selective Search
     
 
-![스크린샷 2021-12-06 오후 9.47.28.png](Regions%20with%20Convolutional%20Neural%20Network%204bf480aba85443b0b9ae5ce196df2389/%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7_2021-12-06_%EC%98%A4%ED%9B%84_9.47.28.png)
+<img width="1114" alt="스크린샷_2021-12-06_오후_9 47 28" src="https://user-images.githubusercontent.com/54128055/149335349-a4f553b0-1068-4ad6-a855-19a499848740.png">
 
 ### R-CNN process
 
@@ -79,7 +76,7 @@ Deep Learning Models : YOLO
 - **Selective Search** 를 통해 Regional proposal output 약 2,000개 추출 (**Image cropping**)
 - 추출한 Regional proposal output 을 모두 동일 Input size (224x224) 로 **Image warping**
     - CNN 모델에서 Convolution Layer 는 Input size 가 고정되지 않지만, FC layer 의 Input size 는 고정이므로 Convolution Layer 에 동일한 Input size 로 입력
-        - FC Layer 의 Input size 가 동일해야 하는 이유
+    - FC Layer 의 Input size 가 동일해야 하는 이유
             
             입력 사이즈가 3이고 히든레이어의 노드수가 4 일떄 이때 총 가중치 수는 12개이다.
             
@@ -98,7 +95,7 @@ Deep Learning Models : YOLO
 
 Selective Search 로 만든 Bounding Box 에서 Localization error 를 줄이기 위해 Regression 수행
 
-![스크린샷 2021-12-07 오후 5.14.45.png](Regions%20with%20Convolutional%20Neural%20Network%204bf480aba85443b0b9ae5ce196df2389/%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7_2021-12-07_%EC%98%A4%ED%9B%84_5.14.45.png)
+<img width="437" alt="스크린샷_2021-12-07_오후_5 14 45" src="https://user-images.githubusercontent.com/54128055/149335361-8bab2856-bbf4-4eab-9c9b-3c5771744a9b.png">
 
 **Notations**
 
